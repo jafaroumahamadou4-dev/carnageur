@@ -1,0 +1,76 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "Le monument du LTDK Maradi avec le slogan 'Ensemble bâtissons le Niger'",
+      "imageUrl": "https://storage.googleapis.com/gweb-aip.appspot.com/generators/easy-ui/user/1a7d6537-c619-4b2a-89a1-2d9b6261f215.jpg",
+      "imageHint": "school monument"
+    },
+    {
+      "id": "proviseur-portrait",
+      "description": "Portrait of the school's headmaster",
+      "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjIyMjQ5MzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "alumni-1",
+      "description": "Portrait of an alumnus",
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjIxODc0NTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "alumni-2",
+      "description": "Portrait of an alumna",
+      "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2MjI0NDMxOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "alumni-3",
+      "description": "Portrait of an alumnus",
+      "imageUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjIyODA1NDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "student-of-month",
+      "description": "Portrait of a student",
+      "imageUrl": "https://images.unsplash.com/photo-1544717305-2782549b5136?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzdHVkZW50JTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYyMjU0ODM1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "student portrait"
+    },
+    {
+      "id": "school-infra-1",
+      "description": "A workshop inside the school",
+      "imageUrl": "https://images.unsplash.com/photo-1719845853806-1c54b0ed37c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx0ZWNobmljYWwlMjB3b3Jrc2hvcHxlbnwwfHx8fDE3NjIzMDkwNjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "technical workshop"
+    },
+    {
+      "id": "school-infra-2",
+      "description": "A computer lab in the school",
+      "imageUrl": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjb21wdXRlciUyMGxhYnxlbnwwfHx8fDE3NjIyNTM4NTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "computer lab"
+    },
+    {
+      "id": "gallery-1",
+      "description": "Students working on a project",
+      "imageUrl": "https://images.unsplash.com/photo-1649700028744-3de5d81dfba9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzdHVkZW50cyUyMHByb2plY3R8ZW58MHx8fHwxNzYyMzA5MDY0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "students project"
+    },
+    {
+      "id": "gallery-2",
+      "description": "A school event",
+      "imageUrl": "https://images.unsplash.com/photo-1517164850305-99a3e65bb47e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzY2hvb2wlMjBldmVudHxlbnwwfHx8fDE3NjIyNTA0MTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "school event"
+    },
+    {
+      "id": "event-image",
+      "description": "An image for the annual alumni meetup event.",
+      "imageUrl": "https://images.unsplash.com/photo-1670523793119-843be7774449?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxldmVudCUyMGFsdW1uaXxlbnwwfHx8fDE3NjI0NjI3NDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "event alumni"
+    },
+    {
+      "id": "amicale-logo",
+      "description": "Logo de l'Amicale des Anciens Élèves du LTDK",
+      "imageUrl": "https://storage.googleapis.com/gweb-aip.appspot.com/generators/easy-ui/user/cbb0c5a2-9d32-4217-a060-66b9a89d71c7.png",
+      "imageHint": "amicale logo"
+    }
+  ]
+}

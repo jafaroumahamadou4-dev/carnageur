@@ -1,0 +1,443 @@
+
+{
+  "entities": {
+    "user": {
+      "title": "User",
+      "description": "A user of the application.",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "description": "The user's unique ID."
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "The user's email address."
+        },
+        "displayName": {
+          "type": "string",
+          "description": "The user's display name."
+        },
+        "photoURL": {
+          "type": "string",
+          "format": "uri",
+          "description": "The URL of the user's profile picture."
+        }
+      },
+      "required": [
+        "uid",
+        "email"
+      ]
+    },
+    "document": {
+      "title": "Document",
+      "description": "A document in the library.",
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the document."
+        },
+        "category": {
+          "type": "string",
+          "description": "The category of the document.",
+          "enum": [
+            "sujet_bac",
+            "autre_document"
+          ]
+        },
+        "type": {
+          "type": "string",
+          "description": "The type of document, if it's not an exam subject.",
+          "enum": [
+            "cours",
+            "td",
+            "exercice"
+          ]
+        },
+        "year": {
+          "type": "number",
+          "description": "The year of the document."
+        },
+        "series": {
+          "type": "string",
+          "description": "The series of the document."
+        },
+        "subject": {
+          "type": "string",
+          "description": "The subject of the document."
+        },
+        "fileURL": {
+          "type": "string",
+          "format": "uri",
+          "description": "The URL of the document file."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The timestamp when the document was created."
+        }
+      },
+      "required": [
+        "title",
+        "category",
+        "subject",
+        "fileURL"
+      ]
+    },
+    "post": {
+      "title": "Post",
+      "description": "An article or news post for the student feed or main news.",
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the post."
+        },
+        "content": {
+          "type": "string",
+          "description": "The main content of the post in Markdown format."
+        },
+        "imageURL": {
+          "type": "string",
+          "format": "uri",
+          "description": "The URL of an image for the post."
+        },
+        "association": {
+          "type": "string",
+          "description": "The association the post belongs to (e.g., cjm, ajp, amicale). If empty, it's a general news post.",
+          "enum": [
+            "cjm",
+            "ajp",
+            "amicale"
+          ]
+        },
+        "authorId": {
+          "type": "string",
+          "description": "The UID of the user who created the post."
+        },
+        "authorName": {
+          "type": "string",
+          "description": "The name of the author."
+        },
+        "authorPhotoURL": {
+          "type": "string",
+          "format": "uri",
+          "description": "The URL of the author's profile picture."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The timestamp when the post was created."
+        }
+      },
+      "required": [
+        "title",
+        "content",
+        "authorId",
+        "authorName"
+      ]
+    },
+    "alumnusPortrait": {
+      "title": "Alumnus Portrait",
+      "description": "A featured alumnus of the school, for the portraits section.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The full name of the alumnus."
+        },
+        "promotion": {
+          "type": "string",
+          "description": "The graduation year and field of study (e.g., '2005 - Génie Civil')."
+        },
+        "testimonial": {
+          "type": "string",
+          "description": "A short quote or testimonial from the alumnus."
+        },
+        "photoURL": {
+          "type": "string",
+          "format": "uri",
+          "description": "The URL of the alumnus's portrait picture."
+        },
+        "order": {
+          "type": "number",
+          "description": "A number to control the display order."
+        }
+      },
+      "required": [
+        "name",
+        "promotion",
+        "testimonial",
+        "photoURL"
+      ]
+    },
+    "schoolOfficial": {
+      "title": "School Official",
+      "description": "A key member of the school's staff, like the headmaster or an admin member.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The full name of the official."
+        },
+        "role": {
+          "type": "string",
+          "description": "The official's role or title (e.g., 'Proviseur')."
+        },
+        "type": {
+          "type": "string",
+          "description": "The type of official, e.g., 'headmaster' or 'administration'.",
+          "enum": [
+            "headmaster",
+            "administration"
+          ]
+        },
+        "message": {
+          "type": "string",
+          "description": "A welcome message or quote (primarily for the headmaster)."
+        },
+        "photoURL": {
+          "type": "string",
+          "format": "uri",
+          "description": "The URL of the official's portrait picture."
+        },
+        "order": {
+          "type": "number",
+          "description": "A number to control the display order for admin members."
+        }
+      },
+      "required": [
+        "name",
+        "role",
+        "type"
+      ]
+    },
+    "schoolPageSection": {
+      "title": "School Page Section",
+      "description": "Content for a specific section of the 'Le Lycée' page.",
+      "type": "object",
+      "properties": {
+        "section": {
+          "type": "string",
+          "description": "The name of the section.",
+          "enum": [
+            "history",
+            "statistics",
+            "infrastructure"
+          ]
+        },
+        "content": {
+          "type": "string",
+          "description": "Text content for the history section."
+        },
+        "label": {
+          "type": "string",
+          "description": "Label for a statistic."
+        },
+        "value": {
+          "type": "string",
+          "description": "Value for a statistic (e.g., '2500+')."
+        },
+        "icon": {
+          "type": "string",
+          "description": "Lucide icon name for a statistic (e.g., 'Users')."
+        },
+        "title": {
+          "type": "string",
+          "description": "Title for an infrastructure image."
+        },
+        "imageUrl": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL for an infrastructure image."
+        },
+        "imageHint": {
+          "type": "string",
+          "description": "AI hint for an infrastructure image."
+        },
+        "order": {
+          "type": "number",
+          "description": "A number to control the display order."
+        }
+      },
+      "required": [
+        "section"
+      ]
+    },
+    "contactInfo": {
+      "title": "Contact Information",
+      "description": "Stores contact details for the school.",
+      "type": "object",
+      "properties": {
+        "address": {
+          "type": "string",
+          "description": "The physical address of the school."
+        },
+        "phone": {
+          "type": "string",
+          "description": "The contact phone number."
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "The contact email address."
+        },
+        "googleMapsEmbedUrl": {
+          "type": "string",
+          "format": "uri",
+          "description": "The URL for the embedded Google Maps view. Should be the 'src' from a Google Maps embed iframe."
+        }
+      },
+      "required": [
+        "address",
+        "phone",
+        "email"
+      ]
+    },
+    "mentorshipRequest": {
+      "title": "Mentorship Request",
+      "description": "A request to become a mentor or find a mentor.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "mentor",
+            "mentee"
+          ]
+        },
+        "name": {
+          "type": "string"
+        },
+        "contact": {
+          "type": "string",
+          "description": "Email or phone number."
+        },
+        "promotion": {
+          "type": "string"
+        },
+        "field": {
+          "type": "string",
+          "description": "Area of expertise (for mentors) or interest (for mentees)."
+        },
+        "motivation": {
+          "type": "string",
+          "description": "Motivation for becoming a mentor."
+        },
+        "status": {
+          "type": "string",
+          "description": "Status for a mentee (student or young graduate)."
+        },
+        "need": {
+          "type": "string",
+          "description": "Description of the need for a mentee."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "type",
+        "name",
+        "contact",
+        "promotion"
+      ]
+    },
+    "membershipApplication": {
+      "title": "Membership Application",
+      "description": "An application to join the alumni association.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "promotion": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "name",
+        "promotion",
+        "email",
+        "phone"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "google.com"
+    ]
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": {
+        "$ref": "#/entities/user"
+      },
+      "description": "Stores public user profile information after they sign in."
+    },
+    "/documents/{documentId}": {
+      "schema": {
+        "$ref": "#/entities/document"
+      },
+      "description": "Stores documents for the digital library. Contains exam subjects, courses, and exercises."
+    },
+    "/posts/{postId}": {
+      "schema": {
+        "$ref": "#/entities/post"
+      },
+      "description": "Stores all posts. Can be general news (no association) or from a student association (cjm, ajp, amicale)."
+    },
+    "/alumniPortraits/{portraitId}": {
+      "schema": {
+        "$ref": "#/entities/alumnusPortrait"
+      },
+      "description": "Stores featured alumni portraits for the Amicale page."
+    },
+    "/schoolOfficials/{officialId}": {
+      "schema": {
+        "$ref": "#/entities/schoolOfficial"
+      },
+      "description": "Stores key personnel of the school. Use document ID 'headmaster' for the headmaster, and others for administration members."
+    },
+    "/schoolPageContent/{contentId}": {
+      "schema": {
+        "$ref": "#/entities/schoolPageSection"
+      },
+      "description": "Stores dynamic content for the 'Le Lycée' page, such as history, stats, and infrastructure images. A document's ID corresponds to its section (e.g. 'history')."
+    },
+    "/contactInfo/{infoId}": {
+      "schema": {
+        "$ref": "#/entities/contactInfo"
+      },
+      "description": "Stores the main contact information for the site. Use document ID 'main' for the primary contact details."
+    },
+    "/mentorshipRequests/{requestId}": {
+      "schema": {
+        "$ref": "#/entities/mentorshipRequest"
+      },
+      "description": "Stores requests from users wanting to become mentors or find a mentor."
+    },
+    "/membershipApplications/{applicationId}": {
+      "schema": {
+        "$ref": "#/entities/membershipApplication"
+      },
+      "description": "Stores applications from alumni wishing to join the association."
+    }
+  }
+}
+
+    
